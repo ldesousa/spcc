@@ -1,0 +1,120 @@
+<html>
+<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
+<script type="text/javascript">
+jQuery.noConflict();
+</script>
+<!--<script src="http://code.highcharts.com/highcharts.js"></script>-->
+<!--<script src="http://code.highcharts.com/modules/exporting.js"></script>-->
+<!--<script src="pieChart.js"></script>-->
+<script src="lib/calc.js"></script>
+<body bgcolor="#454545" text="#CCCCCC">
+<table border=1>
+<tr>
+ <td colspan=3 align=left><b>1. System characteristics</b></td>
+</tr>
+<tr>
+ <td align=right>Installed capacity&nbsp<img title="This is some info" src=img/info.png></td>
+ <td><input type="text" id="sysCap" value="1" size=10/></td>
+ <td>kWp</td>
+</tr>
+<tr>
+ <td align=right>Expected generation&nbsp<img title="This is some info" src=img/info.png></td>
+ <td><input type="text" id="sysGen" value="1000" size=10/></td>
+ <td>Wh/Wp</td>
+</tr>
+<tr>
+ <td align=right>Efficiency decay&nbsp<img title="This is some info" src=img/info.png></td>
+ <td><input type="text" id="sysDecay" value="0.5" size=10/></td>
+ <td>%/a</td>
+</tr>
+<tr>
+ <td align=right>Expected lifetime&nbsp<img title="This is some info" src=img/info.png></td>
+ <td><input type="text" id="sysLifetime" value="20" size=10/></td>
+ <td>years</td>
+</tr>
+<tr>
+ <td colspan=3 align=left><b>2. Investment costs</b></td>
+</tr>
+<tr>
+ <td align=right>Panels&nbsp<img title="This is some info" src=img/info.png></td>
+ <td><input type="text" id="invPanels" value="600" size=10/></td>
+ <td>&euro;/kWp</td>
+</tr>
+<tr>
+ <td align=right>Inverter&nbsp<img title="This is some info" src=img/info.png></td>
+ <td><input type="text" id="invInverter" value="200" size=10/></td>
+ <td>&euro;/kWp</td>
+</tr>
+<tr>
+ <td align=right>Assembly and Installation&nbsp<img title="This is some info" src=img/info.png></td>
+ <td><input type="text" id="invInstall" value="800" size=10/></td>
+ <td>&euro;/kWp</td>
+</tr>
+<tr>
+ <td colspan=3 align=left><b>3. Maintenance</b></td>
+</tr>
+<tr>
+ <td align=right>Inverter lifetime&nbsp<img title="This is some info" src=img/info.png></td>
+ <td><input type="text" id="maintInverter" value="10" size=10/></td>
+ <td>years</td>
+</tr>
+<tr>
+ <td align=right>Other costs&nbsp<img title="This is some info" src=img/info.png></td>
+ <td><input type="text" id="maintOther" value="20" size=10/></td>
+ <td>&euro;/a</td>
+</tr>
+<tr>
+ <td colspan=3 align=left><b>4. Financing</b></td>
+</tr>
+<tr>
+ <td align=right>Percentage financed&nbsp<img title="This is some info" src=img/info.png></td>
+ <td><input type="text" id="fincPercent" value="80" size=10/></td>
+ <td>%</td>
+</tr>
+<tr>
+ <td align=right>Time&nbsp<img title="This is some info" src=img/info.png></td>
+ <td><input type="text" id="fincTime" value="8" size=10/></td>
+ <td>years</td>
+</tr>
+<tr>
+ <td align=right>Interest&nbsp<img title="This is some info" src=img/info.png></td>
+ <td><input type="text" id="fincInterest" value="1.5" size=10/></td>
+ <td>%/a</td>
+</tr>
+<tr>
+ <td colspan=3 align=left><b>5. Storage</b></td>
+</tr>
+<tr>
+ <td align=right>Cost&nbsp<img title="This is some info" src=img/info.png></td>
+ <td><input type="text" id="strgCost" value="600" size=10/></td>
+ <td>&euro;</td>
+</tr>
+<tr>
+ <td align=right>Lifetime&nbsp<img title="This is some info" src=img/info.png></td>
+ <td><input type="text" id="strgLifetime" value="10" size=10/></td>
+ <td>years</td>
+</tr>
+<tr>
+ <td align=right>Effiency&nbsp<img title="This is some info" src=img/info.png></td>
+ <td><input type="text" id="strgEff" value="90" size=10/></td>
+ <td>%</td>
+</tr>
+<tr>
+ <td align=right>Share of energy stored&nbsp<img title="This is some info" src=img/info.png></td>
+ <td><input type="text" id="strgShare" value="30" size=10/></td>
+ <td>%</td>
+</tr>
+<tr height=80>
+ <td align=center colspan=3><input type="button" value="Calculate" onclick="sppc.calculate();" style="width=100px"></td>
+</tr>
+</table>
+<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+</body>
+</html>
+
+
+
+
+
+
+
