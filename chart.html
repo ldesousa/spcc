@@ -13,20 +13,6 @@
 <script src="http://code.highcharts.com/modules/exporting.js"></script>
 <script src="http://www.highcharts.com/js/themes/gray.js"></script>
 <script>
-function hello(){
- //alert("HELLLO");
- renderChart('container');
-
- $("#container").dialog({
-	width: 'auto',
-	height: 'auto',
-	margin: 20,
-	modal: true
-  });
-
- 
-}
-
 function renderChart(container) {
 chart = new Highcharts.Chart({
             chart: {
@@ -44,7 +30,7 @@ chart = new Highcharts.Chart({
                 x: -20
             },
             xAxis: {
-    title: {
+    		title: {
                     text: 'Lifetime (years)'
                 },
                 categories: ['10', '11', '12', '13', '14', '15', '16', '17',
@@ -90,15 +76,36 @@ chart = new Highcharts.Chart({
             }]
         });
 }
+
+function showGraphDialog(renderTo){
+
+ document.getElementById(renderTo).style.height = '600px';
+ renderChart(renderTo);
+
+   $("#" + renderTo).dialog({
+	width: 'auto',
+	height: 'auto',
+	//colour: blue,
+	margin: 20,
+	modal: true,
+	buttons: {
+	 Close: function() {
+	 $( this ).dialog( "close" );
+	 }
+	}
+  });
+
+ 
+}
 </script>
 </head>
-<body>
-<div id="container" style="width: 90%; height: 600px; margin: 0 auto"></div>
-<div id="dialog-modal" title="Basic modal dialog" style="width=300px">
-<p>Adding the modal overlay screen makes the dialog look more prominent because it dims out the page content.</p>
+<body onload="renderChart('graph-container');">
+
+
+<div id="graph-container" style="width: 580px; height: 400px; margin: 0 auto"  onclick="hello();" title="A beautiful graph">
 </div>
-<p>Sed vel diam id libero <a href="http://example.com">rutrum convallis</a>. Donec aliquet leo vel magna. Phasellus rhoncus faucibus ante. Etiam bibendum, enim faucibus aliquet rhoncus, arcu felis ultricies neque, sit amet auctor elit eros a lectus.</p>
-<input type="button" value="Calculate" onclick="hello();" style="width=100px">
+<p align=center><i><a href=# onclick="showGraphDialog('graph-dialog');">View full version.</a></i></p>
+<div id="graph-dialog" style="width: 96%; height: 0px; margin: 0 auto" title="A beautiful graph">
 
 <script type="text/javascript">
 
