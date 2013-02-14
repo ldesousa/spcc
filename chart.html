@@ -3,7 +3,7 @@
 <meta charset="utf-8" />
 <title>jQuery UI Dialog - Default functionality</title>
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" />
-<link rel="stylesheet" href="jquery/ui/1.10.0/themes/base/jquery-ui.css" />
+<!--<link rel="stylesheet" href="jquery/ui/1.10.0/themes/base/jquery-ui.css" />-->
 <!--<script src="http://code.jquery.com/jquery-1.8.3.js"></script>-->
 <script src="jquery/jquery-1.8.3.js"></script>
 <!--<script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>-->
@@ -97,14 +97,82 @@ function showGraphDialog(renderTo){
 
  
 }
+
+<!-- Question:
+http://stackoverflow.com/questions/14841565/highcharts-overlay-label-on-a-graph
+-->
+
+$(function () {
+    var chart;
+    $(document).ready(function() {
+        chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'pie-container',
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false
+            },
+            title: {
+                text: 'Browser market shares at a specific website, 2010'
+            },
+            tooltip: {
+        	    pointFormat: '{series.name}: <b>{point.percentage}%',
+            	percentageDecimals: 1
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        color: '#FFFFFF',
+                        connectorColor: '#FFFFFF',
+                        formatter: function() {
+                            return '<b>'+ this.point.name +'</b>: '+ this.percentage +' %';
+                        }
+                    }
+                }
+            },
+            series: [{
+                type: 'pie',
+                name: 'Browser share',
+                data: [
+                    ['Firefox',   45.0],
+                    ['IE',       26.8],
+                    {
+                        name: 'Chrome',
+                        y: 12.8,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Safari',    8.5],
+                    ['Opera',     6.2],
+                    ['Others',   0.7]
+                ]
+            }],
+			labels: [
+				{html: "<b>This is a label!</b>", 
+				style: {
+					left: '100px', 
+					top: '100px',
+					width: '50px'}}],
+        });
+    });
+    
+});
+
 </script>
 </head>
 <body onload="renderChart('graph-container');">
 
 
+<div id="pie-container" style="width: 580px; height: 400px; margin: 0 auto" title="A beautiful graph">
+</div>
+<br><br>
 <div id="graph-container" style="width: 580px; height: 400px; margin: 0 auto"  onclick="hello();" title="A beautiful graph">
 </div>
-<p align=center><i><a href=# onclick="showGraphDialog('graph-dialog');">View full version.</a></i></p>
+
+<p align=center><i><a href=# onclick="showGraphDialog('graph-dialog');">Open full version.</a></i></p>
 <div id="graph-dialog" style="width: 96%; height: 0px; margin: 0 auto" title="A beautiful graph">
 
 <script type="text/javascript">
