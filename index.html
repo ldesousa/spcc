@@ -7,6 +7,7 @@ jQuery.noConflict();
 <!--<script src="http://code.highcharts.com/modules/exporting.js"></script>-->
 <!--<script src="pieChart.js"></script>-->
 <script src="lib/calc.js"></script>
+<script src="lib/validators.js"></script>
 <body bgcolor="#454545" text="#CCCCCC">
 <table border=1>
 <tr>
@@ -14,7 +15,7 @@ jQuery.noConflict();
 </tr>
 <tr>
  <td align=right>Installed capacity&nbsp<img title="This is some info" src=img/info.png></td>
- <td><input type="text" id="sysCap" value="1" size=10/></td>
+ <td><input type="text" id="sysCap" value="1" size=10 onChange="spcc.val.sysCap(this);"/></td>
  <td>kWp</td>
 </tr>
 <tr>
@@ -105,7 +106,7 @@ jQuery.noConflict();
  <td>%</td>
 </tr>
 <tr height=80>
- <td align=center colspan=3><input type="button" value="Calculate" onclick="sppc.calculate();" style="width=100px"></td>
+ <td align=center colspan=3><input type="button" value="Calculate" onclick="spcc.calculate();" style="width=100px"></td>
 </tr>
 </table>
 <div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
