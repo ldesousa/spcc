@@ -20,17 +20,17 @@ jQuery.noConflict();
 </tr>
 <tr>
  <td align=right>Expected generation&nbsp<img title="This is some info" src=img/info.png></td>
- <td><input type="text" id="sysGen" value="1000" size=10/></td>
+ <td><input type="text" id="sysGen" value="1000" size=10 onChange="spcc.val.sysGen(this);"/></td>
  <td>Wh/Wp</td>
 </tr>
 <tr>
  <td align=right>Efficiency decay&nbsp<img title="This is some info" src=img/info.png></td>
- <td><input type="text" id="sysDecay" value="0.5" size=10/></td>
+ <td><input type="text" id="sysDecay" value="0.5" size=10 onChange="spcc.val.sysDecay(this);"/></td>
  <td>%/a</td>
 </tr>
 <tr>
  <td align=right>Expected lifetime&nbsp<img title="This is some info" src=img/info.png></td>
- <td><input type="text" id="sysLifetime" value="20" size=10/></td>
+ <td><input type="text" id="sysLifetime" value="20" size=10 onChange="spcc.val.sysLifetime(this);"/></td>
  <td>years</td>
 </tr>
 <tr>
@@ -38,17 +38,17 @@ jQuery.noConflict();
 </tr>
 <tr>
  <td align=right>Panels&nbsp<img title="This is some info" src=img/info.png></td>
- <td><input type="text" id="invPanels" value="600" size=10/></td>
+ <td><input type="text" id="invPanels" value="600" size=10 onChange="spcc.val.invPanels(this);"/></td>
  <td>&euro;/kWp</td>
 </tr>
 <tr>
  <td align=right>Inverter&nbsp<img title="This is some info" src=img/info.png></td>
- <td><input type="text" id="invInverter" value="200" size=10/></td>
+ <td><input type="text" id="invInverter" value="200" size=10 onChange="spcc.val.invInverter(this);"/></td>
  <td>&euro;/kWp</td>
 </tr>
 <tr>
  <td align=right>Assembly and Installation&nbsp<img title="This is some info" src=img/info.png></td>
- <td><input type="text" id="invInstall" value="800" size=10/></td>
+ <td><input type="text" id="invInstall" value="800" size=10 onChange="spcc.val.invInstall(this);"/></td>
  <td>&euro;/kWp</td>
 </tr>
 <tr>
@@ -56,12 +56,12 @@ jQuery.noConflict();
 </tr>
 <tr>
  <td align=right>Inverter lifetime&nbsp<img title="This is some info" src=img/info.png></td>
- <td><input type="text" id="maintInverter" value="10" size=10/></td>
+ <td><input type="text" id="maintInverter" value="10" size=10 onChange="spcc.val.maintInverter(this);"/></td>
  <td>years</td>
 </tr>
 <tr>
  <td align=right>Other costs&nbsp<img title="This is some info" src=img/info.png></td>
- <td><input type="text" id="maintOther" value="20" size=10/></td>
+ <td><input type="text" id="maintOther" value="20" size=10 onChange="spcc.val.maintOther(this);"/></td>
  <td>&euro;/a</td>
 </tr>
 <tr>
@@ -69,17 +69,17 @@ jQuery.noConflict();
 </tr>
 <tr>
  <td align=right>Percentage financed&nbsp<img title="This is some info" src=img/info.png></td>
- <td><input type="text" id="fincPercent" value="80" size=10/></td>
+ <td><input type="text" id="fincPercent" value="80" size=10 onChange="spcc.val.fincPercent(this);"/></td>
  <td>%</td>
 </tr>
 <tr>
  <td align=right>Time&nbsp<img title="This is some info" src=img/info.png></td>
- <td><input type="text" id="fincTime" value="8" size=10/></td>
+ <td><input type="text" id="fincTime" value="8" size=10 onChange="spcc.val.fincTime(this);"/></td>
  <td>years</td>
 </tr>
 <tr>
  <td align=right>Interest&nbsp<img title="This is some info" src=img/info.png></td>
- <td><input type="text" id="fincInterest" value="2" size=10/></td>
+ <td><input type="text" id="fincInterest" value="2" size=10 onChange="spcc.val.fincInterest(this);"/></td>
  <td>%/a</td>
 </tr>
 <tr>
@@ -87,22 +87,22 @@ jQuery.noConflict();
 </tr>
 <tr>
  <td align=right>Cost&nbsp<img title="This is some info" src=img/info.png></td>
- <td><input type="text" id="strgCost" value="600" size=10/></td>
+ <td><input type="text" id="strgCost" value="600" size=10 onChange="spcc.val.strgCost(this);"/></td>
  <td>&euro;</td>
 </tr>
 <tr>
  <td align=right>Lifetime&nbsp<img title="This is some info" src=img/info.png></td>
- <td><input type="text" id="strgLifetime" value="10" size=10/></td>
+ <td><input type="text" id="strgLifetime" value="10" size=10 onChange="spcc.val.strgLifetime(this);"/></td>
  <td>years</td>
 </tr>
 <tr>
  <td align=right>Effiency&nbsp<img title="This is some info" src=img/info.png></td>
- <td><input type="text" id="strgEff" value="90" size=10/></td>
+ <td><input type="text" id="strgEff" value="90" size=10 onChange="spcc.val.strgEff(this);"/></td>
  <td>%</td>
 </tr>
 <tr>
  <td align=right>Share of energy stored&nbsp<img title="This is some info" src=img/info.png></td>
- <td><input type="text" id="strgShare" value="30" size=10/></td>
+ <td><input type="text" id="strgShare" value="30" size=10 onChange="spcc.val.strgEff(this);"/></td>
  <td>%</td>
 </tr>
 <tr height=80>
