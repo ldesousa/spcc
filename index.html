@@ -6,8 +6,20 @@ jQuery.noConflict();
 <!--<script src="http://code.highcharts.com/highcharts.js"></script>-->
 <!--<script src="http://code.highcharts.com/modules/exporting.js"></script>-->
 <!--<script src="pieChart.js"></script>-->
+<script src="jquery/jquery-1.8.3.js"></script>
+<script src="jquery/ui/1.10.0/jquery-ui.js"></script>
+
+<!--<script src="highcharts/highcharts.js"></script>
+<script src="highcharts/modules/exporting.js"></script>
+<script src="highcharts/js/themes/gray.js"></script>-->
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+<script src="http://www.highcharts.com/js/themes/gray.js"></script>
+
 <script src="lib/calc.js"></script>
 <script src="lib/validators.js"></script>
+<script src="lib/charts.js"></script>
+
 <body bgcolor="#454545" text="#CCCCCC">
 <table border=1>
 <tr>
@@ -110,6 +122,8 @@ jQuery.noConflict();
 </tr>
 </table>
 <div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+<div id="graph-container" style="width: 580px; height: 400px; margin: 0 auto"  onclick="hello();" title="A beautiful graph">
+</div>
 </body>
 </html>
 
