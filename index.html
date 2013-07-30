@@ -21,6 +21,7 @@ jQuery.noConflict();
 <script src="lib/calc.js"></script>
 <script src="lib/validators.js"></script>
 <script src="lib/charts.js"></script>
+<script src="lib/info.js"></script>
 
 <body bgcolor="#454545" text="#CCCCCC">
 <table border=1>
@@ -28,9 +29,17 @@ jQuery.noConflict();
  <td colspan=3 align=left><b>1. System characteristics</b></td>
 </tr>
 <tr>
- <td align=right>Installed capacity&nbsp<img title="This is some info" src=img/info.png></td>
+ <td align=right>
+  Installed capacity&nbsp
+  <button onclick="spcc.displayRow('sysCapInfo')" style="width:25px">
+	<img title="Click for details" src=img/info.png>
+  </button>
+ </td>
  <td><input type="text" id="sysCap" value="1" size=10 onChange="spcc.val.sysCap(this);"/></td>
  <td>kWp</td>
+</tr>
+<tr id="sysCapInfo" style="display:none">
+ <td colspan=3>This is some info.</td>
 </tr>
 <tr>
  <td align=right>Expected generation&nbsp<img title="This is some info" src=img/info.png></td>
