@@ -24,14 +24,14 @@ jQuery.noConflict();
 <script src="lib/info.js"></script>
 
 <body bgcolor="#454545" text="#CCCCCC">
-<table border=1>
+<table border=1 width=580>
 <tr>
  <td colspan=3 align=left><b>1. System characteristics</b></td>
 </tr>
 <tr>
  <td align=right>
   Installed capacity&nbsp
-  <button onclick="spcc.displayRow('sysCapInfo')" style="width:25px">
+  <button onclick="spcc.info.displayRow('sysCapInfo')" style="width:25px">
 	<img title="Click for details" src=img/info.png>
   </button>
  </td>
@@ -57,7 +57,8 @@ jQuery.noConflict();
  </td>
 </tr>
 <tr>
- <td align=right>Efficiency decay&nbsp<img title="This is some info" src=img/info.png></td>
+ <td align=right>Efficiency decay&nbsp
+ <img title="This is some info" onclick="spcc.info.toggle('sysDecayInfo', this)" src=img/info_medium.png></td>
  <td><input type="text" id="sysDecay" value="0.5" size=10 onChange="spcc.val.sysDecay(this);"/></td>
  <td>%/a</td>
 </tr>
@@ -68,7 +69,13 @@ jQuery.noConflict();
  </td>
 </tr>
 <tr>
- <td align=right>Expected lifetime&nbsp<img title="This is some info" src=img/info.png></td>
+ <td align=right>
+ <div onMouseOver="spcc.info.setItalic(this)" 
+	  onMouseOut="spcc.info.setItalic(this)" 
+      onClick="spcc.info.toggle2(this, 'sysLifetimeInfo')">
+  Expected lifetime
+ </div>
+ <!--&nbsp<img title="This is some info" src=img/info.png></td>-->
  <td><input type="text" id="sysLifetime" value="30" size=10 onChange="spcc.val.sysLifetime(this);"/></td>
  <td>years</td>
 </tr>
