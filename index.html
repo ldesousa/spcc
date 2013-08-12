@@ -1,4 +1,5 @@
 <html>
+<head>
 <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
 
 <!--<script src="http://code.highcharts.com/highcharts.js"></script>-->
@@ -23,20 +24,25 @@ jQuery.noConflict();
 <script src="lib/charts.js"></script>
 <script src="lib/info.js"></script>
 
+<link  href="styles.css" rel="stylesheet">
+
+</head>
+
 <body bgcolor="#454545" text="#CCCCCC">
-<table border=1 width=580>
+<table border=1 width=500>
 <tr>
  <td colspan=3 align=left><b>1. System characteristics</b></td>
 </tr>
 <tr>
- <td align=right>
-  Installed capacity&nbsp
-  <button onclick="spcc.info.displayRow('sysCapInfo')" style="width:25px">
-	<img title="Click for details" src=img/info.png>
-  </button>
+ <td align=right width=350>
+  <div onMouseOver="spcc.info.setItalic(this, 'sysCapInfo')" 
+	   onMouseOut="spcc.info.setItalic(this, 'sysCapInfo')" 
+       onClick="spcc.info.toggle(this, 'sysCapInfo')">
+   Installed capacity
+  </div>
  </td>
- <td><input type="text" id="sysCap" value="1" size=10 onChange="spcc.val.sysCap(this);"/></td>
- <td>kWp</td>
+ <td width=100><input type="text"  class="input" class="input" id="sysCap" value="1" size=10 onChange="spcc.val.sysCap(this);"/></td>
+ <td width=50>kWp</td>
 </tr>
 <tr id="sysCapInfo" style="display:none">
  <td colspan=3>
@@ -45,9 +51,15 @@ jQuery.noConflict();
  </td>
 </tr>
 <tr>
- <td align=right>Expected generation&nbsp<img title="This is some info" src=img/info.png></td>
- <td><input type="text" id="sysGen" value="1000" size=10 onChange="spcc.val.sysGen(this);"/></td>
- <td>Wh/Wp/a</td>
+ <td align=right width=350>
+  <div onMouseOver="spcc.info.setItalic(this, 'sysGenInfo')" 
+	   onMouseOut="spcc.info.setItalic(this, 'sysGenInfo')" 
+       onClick="spcc.info.toggle(this, 'sysGenInfo')">
+	Expected generation
+  </div>
+ </td>
+ <td width=100><input type="text"  class="input" id="sysGen" value="1000" size=10 onChange="spcc.val.sysGen(this);"/></td>
+ <td width=50>Wh/Wp/a</td>
 </tr>
 <tr id="sysGenInfo" style="display:none">
  <td colspan=3>
@@ -57,40 +69,50 @@ jQuery.noConflict();
  </td>
 </tr>
 <tr>
- <td align=right>Efficiency decay&nbsp
- <img title="This is some info" onclick="spcc.info.toggle('sysDecayInfo', this)" src=img/info_medium.png></td>
- <td><input type="text" id="sysDecay" value="0.5" size=10 onChange="spcc.val.sysDecay(this);"/></td>
- <td>%/a</td>
+ <td align=right width=350>
+  <div onMouseOver="spcc.info.setItalic(this, 'sysDecayInfo')" 
+	   onMouseOut="spcc.info.setItalic(this, 'sysDecayInfo')" 
+       onClick="spcc.info.toggle(this, 'sysDecayInfo')">
+	Efficiency decay
+  </div>
+ </td>
+ <td width=100><input type="text"  class="input" id="sysDecay" value="0.5" size=10 onChange="spcc.val.sysDecay(this);"/></td>
+ <td width=50>%/a</td>
 </tr>
 <tr id="sysDecayInfo" style="display:none">
  <td colspan=3>
-  The efficiency with with solar panels harvest energy decays with time, in part due to the impact of sunlight itself.
-  Although not linear, nor constant, a figure of 0.5 percent per year (%/a) is a sensible option (i.e. a system that generated 1000 Wh this year will generate 995 Wh next year). 
+ <i> The efficiency with with solar panels harvest energy decays with time, in part due to the impact of sunlight itself.
+  Although not linear, nor constant, a figure of 0.5 percent per year (%/a) is a sensible option (i.e. a system that generated 1000 Wh this year will generate 995 Wh next year). </i>
  </td>
 </tr>
 <tr>
- <td align=right>
- <div onMouseOver="spcc.info.setItalic(this)" 
-	  onMouseOut="spcc.info.setItalic(this)" 
-      onClick="spcc.info.toggle2(this, 'sysLifetimeInfo')">
+ <td align=right width=350>
+ <div onMouseOver="spcc.info.setItalic(this, 'sysLifetimeInfo')" 
+	  onMouseOut="spcc.info.setItalic(this, 'sysLifetimeInfo')" 
+      onClick="spcc.info.toggle(this, 'sysLifetimeInfo')">
   Expected lifetime
  </div>
- <!--&nbsp<img title="This is some info" src=img/info.png></td>-->
- <td><input type="text" id="sysLifetime" value="30" size=10 onChange="spcc.val.sysLifetime(this);"/></td>
- <td>years</td>
+ <td width=100><input type="text"  class="input" id="sysLifetime" value="30" size=10 onChange="spcc.val.sysLifetime(this);"/></td>
+ <td width=50>years</td>
 </tr>
 <tr id="sysLifetimeInfo" style="display:none">
  <td colspan=3>
-  The number of years the system is supposed to last. Various indicators can be used to determine expected system lifetime, like the point where efficiency drops below 80% of initial conditions. However, the most sensible option is to match this figure with the panels warranty period.
+  <i>The number of years the system is supposed to last. Various indicators can be used to determine expected system lifetime, like the point where efficiency drops below 80% of initial conditions. However, the most sensible option is to match this figure with the panels warranty period.</i>
  </td>
 </tr>
 <tr>
  <td colspan=3 align=left><b>2. Investment costs</b></td>
 </tr>
 <tr>
- <td align=right>Panels&nbsp<img title="This is some info" src=img/info.png></td>
- <td><input type="text" id="invPanels" value="600" size=10 onChange="spcc.val.invPanels(this);"/></td>
- <td>&euro;/kWp</td>
+ <td align=right width=350>
+  <div onMouseOver="spcc.info.setItalic(this, 'invPanelsInfo')" 
+	   onMouseOut="spcc.info.setItalic(this, 'invPanelsInfo')" 
+       onClick="spcc.info.toggle(this, 'invPanelsInfo')">
+	Panels
+  </div>
+ </td>
+ <td width=100><input type="text"  class="input" id="invPanels" value="600" size=10 onChange="spcc.val.invPanels(this);"/></td>
+ <td width=50>&euro;/kWp</td>
 </tr>
 <tr id="invPanelsInfo" style="display:none">
  <td colspan=3>
@@ -99,9 +121,15 @@ jQuery.noConflict();
  </td>
 </tr>
 <tr>
- <td align=right>Inverter&nbsp<img title="This is some info" src=img/info.png></td>
- <td><input type="text" id="invInverter" value="200" size=10 onChange="spcc.val.invInverter(this);"/></td>
- <td>&euro;/kWp</td>
+ <td align=right width=350>
+  <div onMouseOver="spcc.info.setItalic(this, 'invInverterInfo')" 
+	   onMouseOut="spcc.info.setItalic(this, 'invInverterInfo')" 
+       onClick="spcc.info.toggle(this, 'invInverterInfo')">
+	Inverter
+  </div>
+ </td>
+ <td width=100><input type="text"  class="input" id="invInverter" value="200" size=10 onChange="spcc.val.invInverter(this);"/></td>
+ <td width=50>&euro;/kWp</td>
 </tr>
 <tr id="invInverterInfo" style="display:none">
  <td colspan=3>
@@ -110,9 +138,15 @@ jQuery.noConflict();
  </td>
 </tr>
 <tr>
- <td align=right>Assembly and Installation&nbsp<img title="This is some info" src=img/info.png></td>
- <td><input type="text" id="invInstall" value="800" size=10 onChange="spcc.val.invInstall(this);"/></td>
- <td>&euro;/kWp</td>
+ <td align=right width=350>
+  <div onMouseOver="spcc.info.setItalic(this, 'invInstallInfo')" 
+	   onMouseOut="spcc.info.setItalic(this, 'invInstallInfo')" 
+       onClick="spcc.info.toggle(this, 'invInstallInfo')">
+	Assembly and Installation
+  </div>
+</td>
+ <td width=100><input type="text"  class="input" id="invInstall" value="800" size=10 onChange="spcc.val.invInstall(this);"/></td>
+ <td width=50>&euro;/kWp</td>
 </tr>
 <tr id="invInstallInfo" style="display:none">
  <td colspan=3>
@@ -124,9 +158,15 @@ jQuery.noConflict();
  <td colspan=3 align=left><b>3. Maintenance</b></td>
 </tr>
 <tr>
- <td align=right>Inverter lifetime&nbsp<img title="This is some info" src=img/info.png></td>
- <td><input type="text" id="maintInverter" value="10" size=10 onChange="spcc.val.maintInverter(this);"/></td>
- <td>years</td>
+ <td align=right width=350>
+  <div onMouseOver="spcc.info.setItalic(this, 'maintInverterInfo')" 
+	   onMouseOut="spcc.info.setItalic(this, 'maintInverterInfo')" 
+       onClick="spcc.info.toggle(this, 'maintInverterInfo')">
+	Inverter lifetime
+  </div>
+ </td>
+ <td width=100><input type="text"  class="input" id="maintInverter" value="10" size=10 onChange="spcc.val.maintInverter(this);"/></td>
+ <td width=50>years</td>
 </tr>
 <tr id="maintInverterInfo" style="display:none">
  <td colspan=3>
@@ -135,9 +175,15 @@ jQuery.noConflict();
  </td>
 </tr>
 <tr>
- <td align=right>Other costs&nbsp<img title="This is some info" src=img/info.png></td>
- <td><input type="text" id="maintOther" value="20" size=10 onChange="spcc.val.maintOther(this);"/></td>
- <td>&euro;/a</td>
+ <td align=right width=350>
+  <div onMouseOver="spcc.info.setItalic(this, 'maintOtherInfo')" 
+	   onMouseOut="spcc.info.setItalic(this, 'maintOtherInfo')" 
+       onClick="spcc.info.toggle(this, 'maintOtherInfo')">
+	Other costs
+  </div>
+ </td>
+ <td width=100><input type="text"  class="input" id="maintOther" value="20" size=10 onChange="spcc.val.maintOther(this);"/></td>
+ <td width=50>&euro;/a</td>
 </tr>
 <tr id="maintOtherInfo" style="display:none">
  <td colspan=3>
@@ -150,9 +196,15 @@ jQuery.noConflict();
  <td colspan=3 align=left><b>4. Financing</b></td>
 </tr>
 <tr>
- <td align=right>Percentage financed&nbsp<img title="This is some info" src=img/info.png></td>
- <td><input type="text" id="fincPercent" value="80" size=10 onChange="spcc.val.fincPercent(this);"/></td>
- <td>%</td>
+ <td align=right width=350>
+  <div onMouseOver="spcc.info.setItalic(this, 'fincPercentInfo')" 
+	   onMouseOut="spcc.info.setItalic(this, 'fincPercentInfo')" 
+       onClick="spcc.info.toggle(this, 'fincPercentInfo')">
+	Percentage financed
+  </div>
+ </td>
+ <td width=100><input type="text"  class="input" id="fincPercent" value="80" size=10 onChange="spcc.val.fincPercent(this);"/></td>
+ <td width=50>%</td>
 </tr>
 <tr id="fincPercentInfo" style="display:none">
  <td colspan=3>
@@ -162,9 +214,15 @@ jQuery.noConflict();
  </td>
 </tr>
 <tr>
- <td align=right>Time&nbsp<img title="This is some info" src=img/info.png></td>
- <td><input type="text" id="fincTime" value="8" size=10 onChange="spcc.val.fincTime(this);"/></td>
- <td>years</td>
+ <td align=right width=350>
+  <div onMouseOver="spcc.info.setItalic(this, 'fincTimeInfo')" 
+	   onMouseOut="spcc.info.setItalic(this, 'fincTimeInfo')" 
+       onClick="spcc.info.toggle(this, 'fincTimeInfo')">
+	Time
+  </div>
+ </td>
+ <td width=100><input type="text"  class="input" id="fincTime" value="8" size=10 onChange="spcc.val.fincTime(this);"/></td>
+ <td width=50>years</td>
 </tr>
 <tr id="fincTimeInfo" style="display:none">
  <td colspan=3>
@@ -172,9 +230,15 @@ jQuery.noConflict();
  </td>
 </tr>
 <tr>
- <td align=right>Interest&nbsp<img title="This is some info" src=img/info.png></td>
- <td><input type="text" id="fincInterest" value="2" size=10 onChange="spcc.val.fincInterest(this);"/></td>
- <td>%/a</td>
+ <td align=right width=350>
+  <div onMouseOver="spcc.info.setItalic(this, 'fincInterestInfo')" 
+	   onMouseOut="spcc.info.setItalic(this, 'fincInterestInfo')" 
+       onClick="spcc.info.toggle(this, 'fincInterestInfo')">
+	Interest
+  </div>
+ </td>
+ <td width=100><input type="text"  class="input" id="fincInterest" value="2" size=10 onChange="spcc.val.fincInterest(this);"/></td>
+ <td width=50>%/a</td>
 </tr>
 <tr id="fincInterestInfo" style="display:none">
  <td colspan=3>
@@ -185,9 +249,15 @@ jQuery.noConflict();
  <td colspan=3 align=left><b>5. Storage</b></td>
 </tr>
 <tr>
- <td align=right>Cost&nbsp<img title="This is some info" src=img/info.png></td>
- <td><input type="text" id="strgCost" value="600" size=10 onChange="spcc.val.strgCost(this);"/></td>
- <td>&euro;</td>
+ <td align=right width=350>
+  <div onMouseOver="spcc.info.setItalic(this, 'strgCostInfo')" 
+	   onMouseOut="spcc.info.setItalic(this, 'strgCostInfo')" 
+       onClick="spcc.info.toggle(this, 'strgCostInfo')">
+	Cost
+  </div>
+ </td>
+ <td width=100><input type="text"  class="input" id="strgCost" value="600" size=10 onChange="spcc.val.strgCost(this);"/></td>
+ <td width=50>&euro;</td>
 </tr>
 </tr>
 <tr id="strgCostInfo" style="display:none">
@@ -197,9 +267,15 @@ jQuery.noConflict();
  </td>
 </tr>
 <tr>
- <td align=right>Lifetime&nbsp<img title="This is some info" src=img/info.png></td>
- <td><input type="text" id="strgLifetime" value="10" size=10 onChange="spcc.val.strgLifetime(this);"/></td>
- <td>years</td>
+ <td align=right width=350>
+  <div onMouseOver="spcc.info.setItalic(this, 'strgLifetimeInfo')" 
+	   onMouseOut="spcc.info.setItalic(this, 'strgLifetimeInfo')" 
+       onClick="spcc.info.toggle(this, 'strgLifetimeInfo')">
+	Lifetime
+  </div>
+ </td>
+ <td width=100><input type="text"  class="input" id="strgLifetime" value="10" size=10 onChange="spcc.val.strgLifetime(this);"/></td>
+ <td width=50>years</td>
 </tr>
 <tr id="strgLifetimeInfo" style="display:none">
  <td colspan=3>
@@ -208,9 +284,15 @@ jQuery.noConflict();
  </td>
 </tr>
 <tr>
- <td align=right>Effiency&nbsp<img title="This is some info" src=img/info.png></td>
- <td><input type="text" id="strgEff" value="90" size=10 onChange="spcc.val.strgEff(this);"/></td>
- <td>%</td>
+ <td align=right width=350>
+  <div onMouseOver="spcc.info.setItalic(this, 'strgLifetimeInfo')" 
+	   onMouseOut="spcc.info.setItalic(this, 'strgLifetimeInfo')" 
+       onClick="spcc.info.toggle(this, 'strgLifetimeInfo')">
+	Effiency
+  </div>
+ </td>
+ <td width=100><input type="text"  class="input" id="strgEff" value="90" size=10 onChange="spcc.val.strgEff(this);"/></td>
+ <td width=50>%</td>
 </tr>
 <tr id="strgLifetimeInfo" style="display:none">
  <td colspan=3>
@@ -220,11 +302,17 @@ jQuery.noConflict();
  </td>
 </tr>
 <tr>
- <td align=right>Share of energy stored&nbsp<img title="This is some info" src=img/info.png></td>
- <td><input type="text" id="strgShare" value="30" size=10 onChange="spcc.val.strgEff(this);"/></td>
- <td>%</td>
+ <td align=right width=350>
+  <div onMouseOver="spcc.info.setItalic(this, 'strgEffInfo')" 
+	   onMouseOut="spcc.info.setItalic(this, 'strgEffInfo')" 
+       onClick="spcc.info.toggle(this, 'strgEffInfo')">
+	Share of energy stored
+  </div>
+ </td>
+ <td width=100><input type="text"  class="input" id="strgShare" value="30" size=10 onChange="spcc.val.strgEff(this);"/></td>
+ <td width=50>%</td>
 </tr>
-<tr id="strgLifetimeInfo" style="display:none">
+<tr id="strgEffInfo" style="display:none">
  <td colspan=3>
   Not all the energy generated by the solar panels needs to be stored, part of is consumed immediatly by any appliances connected.
   An off-the-grid system should be dimensioned in order to minimise the usage of the storage system, so that it is needed mainly during summer, making the extra energy generated during the day available to the night; during the winter months idealy the storage system shouldn't be needed. This field is thus the percentage of the total energy generated throughout the year that gets to be stored.
