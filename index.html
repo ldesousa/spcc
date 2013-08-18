@@ -49,7 +49,8 @@ jQuery.noConflict();
 </head>
 
 <body bgcolor="#454545" text="#CCCCCC">
-<table border=0 width=500 align=center cellspacing=6>
+
+<table border=0 width=400 align=center cellspacing=6>
 <tr class="title">
  <td colspan=3 align=left><b>1. System characteristics</b></td>
 </tr>
@@ -62,7 +63,7 @@ jQuery.noConflict();
    Installed capacity
   </div>
  </td>
- <td width=100><input type="text"  class="input" class="input" id="sysCap" value="1" size=10 onChange="spcc.val.sysCap(this);"/></td>
+ <td width=80><input type="text"  class="input" class="input" id="sysCap" value="1" size=10 onChange="spcc.val.sysCap(this);"/></td>
  <td width=50>kWp</td>
 </tr>
 <tr id="sysCapInfo" class="input-line" style="display:none">
@@ -80,7 +81,7 @@ jQuery.noConflict();
 	Expected generation
   </div>
  </td>
- <td width=100><input type="text"  class="input" id="sysGen" value="1000" size=10 onChange="spcc.val.sysGen(this);"/></td>
+ <td width=80><input type="text"  class="input" id="sysGen" value="1000" size=10 onChange="spcc.val.sysGen(this);"/></td>
  <td width=50>Wh/Wp/a</td>
 </tr>
 <tr id="sysGenInfo" class="input-line-alt" style="display:none">
@@ -99,7 +100,7 @@ jQuery.noConflict();
 	Efficiency decay
   </div>
  </td>
- <td width=100><input type="text"  class="input" id="sysDecay" value="0.5" size=10 onChange="spcc.val.sysDecay(this);"/></td>
+ <td width=80><input type="text"  class="input" id="sysDecay" value="0.5" size=10 onChange="spcc.val.sysDecay(this);"/></td>
  <td width=50>%/a</td>
 </tr>
 <tr id="sysDecayInfo" class="input-line" style="display:none">
@@ -116,7 +117,7 @@ jQuery.noConflict();
 	   title="Click for details" class="descriptor">
   Expected lifetime
  </div>
- <td width=100><input type="text"  class="input" id="sysLifetime" value="30" size=10 onChange="spcc.val.sysLifetime(this);"/></td>
+ <td width=80><input type="text"  class="input" id="sysLifetime" value="30" size=10 onChange="spcc.val.sysLifetime(this);"/></td>
  <td width=50>years</td>
 </tr>
 <tr id="sysLifetimeInfo" class="input-line-alt" style="display:none">
@@ -124,7 +125,7 @@ jQuery.noConflict();
   <i>The number of years the system is supposed to last. Various indicators can be used to determine expected system lifetime, like the point where efficiency drops below 80% of initial characteristics. However, the most sensible option is to match this figure to the panels warranty period.</i>
  </td>
 </tr>
-<tr></tr>
+<tr><td height=10></td></tr>
 <tr  class="title">
  <td colspan=3 align=left><b>2. Investment costs</b></td>
 </tr>
@@ -137,7 +138,7 @@ jQuery.noConflict();
 	Panels
   </div>
  </td>
- <td width=100><input type="text"  class="input" id="invPanels" value="600" size=10 onChange="spcc.val.invPanels(this);"/></td>
+ <td width=80><input type="text"  class="input" id="invPanels" value="600" size=10 onChange="spcc.val.invPanels(this);"/></td>
  <td width=50>&euro;/kWp</td>
 </tr>
 <tr id="invPanelsInfo" class="input-line" style="display:none">
@@ -155,7 +156,7 @@ jQuery.noConflict();
 	Inverter
   </div>
  </td>
- <td width=100><input type="text"  class="input" id="invInverter" value="200" size=10 onChange="spcc.val.invInverter(this);"/></td>
+ <td width=80><input type="text"  class="input" id="invInverter" value="200" size=10 onChange="spcc.val.invInverter(this);"/></td>
  <td width=50>&euro;/kWp</td>
 </tr>
 <tr id="invInverterInfo" class="input-line-alt" style="display:none">
@@ -173,7 +174,7 @@ jQuery.noConflict();
 	Assembly and Installation
   </div>
  </td>
- <td width=100><input type="text"  class="input" id="invInstall" value="800" size=10 onChange="spcc.val.invInstall(this);"/></td>
+ <td width=80><input type="text"  class="input" id="invInstall" value="800" size=10 onChange="spcc.val.invInstall(this);"/></td>
  <td width=50>&euro;/kWp</td>
 </tr>
 <tr id="invInstallInfo" class="input-line" style="display:none">
@@ -182,7 +183,7 @@ jQuery.noConflict();
   If only the bulk cost is known, including panels and installation, leave zero in this field and use only the Panels cost field.</i>
  </td>
 </tr>
-<tr></tr>
+<tr><td height=10></td></tr>
 <tr>
  <td colspan=3 align=left class="title"><b>3. Maintenance</b></td>
 </tr>
@@ -195,7 +196,7 @@ jQuery.noConflict();
 	Inverter lifetime
   </div>
  </td>
- <td width=100><input type="text"  class="input" id="maintInverter" value="10" size=10 onChange="spcc.val.maintInverter(this);"/></td>
+ <td width=80><input type="text"  class="input" id="maintInverter" value="10" size=10 onChange="spcc.val.maintInverter(this);"/></td>
  <td width=50>years</td>
 </tr>
 <tr id="maintInverterInfo" class="input-line" style="display:none">
@@ -213,7 +214,7 @@ jQuery.noConflict();
 	Other costs
   </div>
  </td>
- <td width=100><input type="text"  class="input" id="maintOther" value="20" size=10 onChange="spcc.val.maintOther(this);"/></td>
+ <td width=80><input type="text"  class="input" id="maintOther" value="20" size=10 onChange="spcc.val.maintOther(this);"/></td>
  <td width=50>&euro;/a</td>
 </tr>
 <tr id="maintOtherInfo" class="input-line-alt" style="display:none">
@@ -223,7 +224,7 @@ jQuery.noConflict();
   If insurance is required it can also be included in this field.</i>
  </td>
 </tr>
-<tr></tr>
+<tr><td height=10></td></tr>
 <tr>
  <td colspan=3 align=left class="title"><b>4. Financing</b></td>
 </tr>
@@ -236,7 +237,7 @@ jQuery.noConflict();
 	Percentage financed
   </div>
  </td>
- <td width=100><input type="text"  class="input" id="fincPercent" value="80" size=10 onChange="spcc.val.fincPercent(this);"/></td>
+ <td width=80><input type="text"  class="input" id="fincPercent" value="80" size=10 onChange="spcc.val.fincPercent(this);"/></td>
  <td width=50>%</td>
 </tr>
 <tr id="fincPercentInfo" class="input-line" style="display:none">
@@ -255,7 +256,7 @@ jQuery.noConflict();
 	Time
   </div>
  </td>
- <td width=100><input type="text"  class="input" id="fincTime" value="8" size=10 onChange="spcc.val.fincTime(this);"/></td>
+ <td width=80><input type="text"  class="input" id="fincTime" value="8" size=10 onChange="spcc.val.fincTime(this);"/></td>
  <td width=50>years</td>
 </tr>
 <tr id="fincTimeInfo" class="input-line-alt" style="display:none">
@@ -272,7 +273,7 @@ jQuery.noConflict();
 	Interest
   </div>
  </td>
- <td width=100><input type="text"  class="input" id="fincInterest" value="2" size=10 onChange="spcc.val.fincInterest(this);"/></td>
+ <td width=80><input type="text"  class="input" id="fincInterest" value="2" size=10 onChange="spcc.val.fincInterest(this);"/></td>
  <td width=50>%/a</td>
 </tr>
 <tr id="fincInterestInfo" class="input-line" style="display:none">
@@ -280,7 +281,7 @@ jQuery.noConflict();
   <i>The interested paid back to the financier as percentage per year (%/a).</i>
  </td>
 </tr>
-<tr></tr>
+<tr><td height=10></td></tr>
 <tr>
  <td colspan=3 align=left class="title"><b>5. Storage</b></td>
 </tr>
@@ -293,7 +294,7 @@ jQuery.noConflict();
 	Cost
   </div>
  </td>
- <td width=100><input type="text"  class="input" id="strgCost" value="600" size=10 onChange="spcc.val.strgCost(this);"/></td>
+ <td width=80><input type="text"  class="input" id="strgCost" value="600" size=10 onChange="spcc.val.strgCost(this);"/></td>
  <td width=50>&euro;</td>
 </tr>
 </tr>
@@ -312,7 +313,7 @@ jQuery.noConflict();
 	Lifetime
   </div>
  </td>
- <td width=100><input type="text"  class="input" id="strgLifetime" value="10" size=10 onChange="spcc.val.strgLifetime(this);"/></td>
+ <td width=80><input type="text"  class="input" id="strgLifetime" value="10" size=10 onChange="spcc.val.strgLifetime(this);"/></td>
  <td width=50>years</td>
 </tr>
 <tr id="strgLifetimeInfo" class="input-line-alt" style="display:none">
@@ -330,7 +331,7 @@ jQuery.noConflict();
 	Effiency
   </div>
  </td>
- <td width=100><input type="text"  class="input" id="strgEff" value="90" size=10 onChange="spcc.val.strgEff(this);"/></td>
+ <td width=80><input type="text"  class="input" id="strgEff" value="90" size=10 onChange="spcc.val.strgEff(this);"/></td>
  <td width=50>%</td>
 </tr>
 <tr id="strgEffInfo" class="input-line" style="display:none">
@@ -349,7 +350,7 @@ jQuery.noConflict();
 	Share of energy stored
   </div>
  </td>
- <td width=100><input type="text"  class="input" id="strgShare" value="30" size=10 onChange="spcc.val.strgShare(this);"/></td>
+ <td width=80><input type="text"  class="input" id="strgShare" value="30" size=10 onChange="spcc.val.strgShare(this);"/></td>
  <td width=50>%</td>
 </tr>
 <tr id="strgShareInfo" class="input-line-alt" style="display:none">
@@ -362,14 +363,13 @@ jQuery.noConflict();
  <td align=center colspan=3><input type="button" value="Calculate" onclick="spcc.calculate();" style="width=100px"></td>
 </tr>
 </table>
-<br><br>
 <div id="graph-container" style="width: 580px; height: 400px; margin: 0 auto">
 </div>
 <br><br>
 <div id="pie-container" style="width: 580px; height: 400px; margin: 0 auto">
 </div>
 <br><br>
-<div id="debug-container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+<div id="debug-container"></div>
 </body>
 </html>
 

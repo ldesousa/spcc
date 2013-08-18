@@ -22,8 +22,10 @@
 .input
 {
 	text-align:right;
-	border-width: 3px; 
-	border-radius: 6px;
+	border-width:3px; 
+	border-radius:6px;
+	font-size:12px;
+	font-family:Arial;
 }
 
 .descriptor
