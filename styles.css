@@ -30,3 +30,25 @@
 {
 	cursor:pointer;
 }
+
+.input-line
+{
+	background-color:#555555;
+}
+
+.input-line-alt
+{
+	background-color:#656565;
+}
+
+.title
+{
+	color:#DD7700;
+	background-color:#353535;
+}
+
+.title-row
+{
+	background-color:#353535;
+}
+

@@ -45,11 +45,11 @@ jQuery.noConflict();
 </head>
 
 <body bgcolor="#454545" text="#CCCCCC">
-<table border=1 width=500 align=center>
-<tr>
+<table border=0 width=500 align=center cellspacing=6>
+<tr class="title">
  <td colspan=3 align=left><b>1. System characteristics</b></td>
 </tr>
-<tr>
+<tr class="input-line">
  <td align=right width=350>
   <div onMouseOver="spcc.info.setItalic(this, 'sysCapInfo')" 
 	   onMouseOut="spcc.info.setItalic(this, 'sysCapInfo')" 
@@ -61,13 +61,13 @@ jQuery.noConflict();
  <td width=100><input type="text"  class="input" class="input" id="sysCap" value="1" size=10 onChange="spcc.val.sysCap(this);"/></td>
  <td width=50>kWp</td>
 </tr>
-<tr id="sysCapInfo" style="display:none">
+<tr id="sysCapInfo" class="input-line" style="display:none">
  <td colspan=3>
-  The installed capacity of the system in Watt (W - sometimes called Watt-peak, Wp). 
-  This is the maximum power output the system can generate under optimal conditions.
+  <i>The installed capacity of the system in Watt (W - sometimes called Watt-peak, Wp). 
+  This is the maximum power output the system can generate under optimal conditions.</i>
  </td>
 </tr>
-<tr>
+<tr class="input-line-alt">
  <td align=right width=350>
   <div onMouseOver="spcc.info.setItalic(this, 'sysGenInfo')" 
 	   onMouseOut="spcc.info.setItalic(this, 'sysGenInfo')" 
@@ -79,14 +79,14 @@ jQuery.noConflict();
  <td width=100><input type="text"  class="input" id="sysGen" value="1000" size=10 onChange="spcc.val.sysGen(this);"/></td>
  <td width=50>Wh/Wp/a</td>
 </tr>
-<tr id="sysGenInfo" style="display:none">
+<tr id="sysGenInfo" class="input-line-alt" style="display:none">
  <td colspan=3>
-  The exepcted amount of energy generated yearly in Watt-hour per Watt-peak per year (Wh/Wp/a). 
+  <i>The exepcted amount of energy generated yearly in Watt-hour per Watt-peak per year (Wh/Wp/a). 
   This figure is a function of the sunlight the system receives each year, dependent on latitude and orientation.
-  The JRC produces a series of maps for Europe with maximum generation values that can be a good starting point to obtain this information.
+  The JRC produces a series of maps for Europe with maximum generation values that can be a good starting point to obtain this information.</i>
  </td>
 </tr>
-<tr>
+<tr class="input-line">
  <td align=right width=350>
   <div onMouseOver="spcc.info.setItalic(this, 'sysDecayInfo')" 
 	   onMouseOut="spcc.info.setItalic(this, 'sysDecayInfo')" 
@@ -98,13 +98,13 @@ jQuery.noConflict();
  <td width=100><input type="text"  class="input" id="sysDecay" value="0.5" size=10 onChange="spcc.val.sysDecay(this);"/></td>
  <td width=50>%/a</td>
 </tr>
-<tr id="sysDecayInfo" style="display:none">
+<tr id="sysDecayInfo" class="input-line" style="display:none">
  <td colspan=3>
  <i> The efficiency with with solar panels harvest energy decays with time, in part due to the impact of sunlight itself.
   Although not linear, nor constant, a figure of 0.5 percent per year (%/a) is a sensible option (i.e. a system that generated 1000 Wh this year will generate 995 Wh next year). </i>
  </td>
 </tr>
-<tr>
+<tr class="input-line-alt">
  <td align=right width=350>
  <div onMouseOver="spcc.info.setItalic(this, 'sysLifetimeInfo')" 
 	  onMouseOut="spcc.info.setItalic(this, 'sysLifetimeInfo')" 
@@ -115,15 +115,16 @@ jQuery.noConflict();
  <td width=100><input type="text"  class="input" id="sysLifetime" value="30" size=10 onChange="spcc.val.sysLifetime(this);"/></td>
  <td width=50>years</td>
 </tr>
-<tr id="sysLifetimeInfo" style="display:none">
+<tr id="sysLifetimeInfo" class="input-line-alt" style="display:none">
  <td colspan=3>
   <i>The number of years the system is supposed to last. Various indicators can be used to determine expected system lifetime, like the point where efficiency drops below 80% of initial conditions. However, the most sensible option is to match this figure with the panels warranty period.</i>
  </td>
 </tr>
-<tr>
+<tr></tr>
+<tr  class="title">
  <td colspan=3 align=left><b>2. Investment costs</b></td>
 </tr>
-<tr>
+<tr class="input-line">
  <td align=right width=350>
   <div onMouseOver="spcc.info.setItalic(this, 'invPanelsInfo')" 
 	   onMouseOut="spcc.info.setItalic(this, 'invPanelsInfo')" 
@@ -135,13 +136,13 @@ jQuery.noConflict();
  <td width=100><input type="text"  class="input" id="invPanels" value="600" size=10 onChange="spcc.val.invPanels(this);"/></td>
  <td width=50>&euro;/kWp</td>
 </tr>
-<tr id="invPanelsInfo" style="display:none">
+<tr id="invPanelsInfo" class="input-line" style="display:none">
  <td colspan=3>
-  The cost of the solar panels composing the system in euro per kWp (&euro;/kWp). 
-  If only the bulk cost is known, including inverter and installation, insert the full value here and insert serp in the next two fields.
+  <i>The cost of the solar panels composing the system in euro per kWp (&euro;/kWp). 
+  If only the bulk cost is known, including inverter and installation, insert the full value here and insert serp in the next two fields.</i>
  </td>
 </tr>
-<tr>
+<tr class="input-line-alt">
  <td align=right width=350>
   <div onMouseOver="spcc.info.setItalic(this, 'invInverterInfo')" 
 	   onMouseOut="spcc.info.setItalic(this, 'invInverterInfo')" 
@@ -153,13 +154,13 @@ jQuery.noConflict();
  <td width=100><input type="text"  class="input" id="invInverter" value="200" size=10 onChange="spcc.val.invInverter(this);"/></td>
  <td width=50>&euro;/kWp</td>
 </tr>
-<tr id="invInverterInfo" style="display:none">
+<tr id="invInverterInfo" class="input-line-alt" style="display:none">
  <td colspan=3>
-  The cost of the inverter linking the system to the grid (or storage system) in euro per kWp (&euro;/kWp). 
-  If only the bulk cost is known, including panels and installation, leave zero in this field and use only the Panels cost field.
+  <i>The cost of the inverter linking the system to the grid (or storage system) in euro per kWp (&euro;/kWp). 
+  If only the bulk cost is known, including panels and installation, leave zero in this field and use only the Panels cost field.</i>
  </td>
 </tr>
-<tr>
+<tr class="input-line">
  <td align=right width=350>
   <div onMouseOver="spcc.info.setItalic(this, 'invInstallInfo')" 
 	   onMouseOut="spcc.info.setItalic(this, 'invInstallInfo')" 
@@ -167,20 +168,21 @@ jQuery.noConflict();
 	   class="descriptor">
 	Assembly and Installation
   </div>
-</td>
+ </td>
  <td width=100><input type="text"  class="input" id="invInstall" value="800" size=10 onChange="spcc.val.invInstall(this);"/></td>
  <td width=50>&euro;/kWp</td>
 </tr>
-<tr id="invInstallInfo" style="display:none">
+<tr id="invInstallInfo" class="input-line" style="display:none">
  <td colspan=3>
-  The cost of system installation (usually also including paperwork and other procedures) in euro per kWp (&euro;/kWp). 
-  If only the bulk cost is known, including panels and installation, leave zero in this field and use only the Panels cost field.
+  <i>The cost of system installation (usually also including paperwork and other procedures) in euro per kWp (&euro;/kWp). 
+  If only the bulk cost is known, including panels and installation, leave zero in this field and use only the Panels cost field.</i>
  </td>
 </tr>
+<tr></tr>
 <tr>
- <td colspan=3 align=left><b>3. Maintenance</b></td>
+ <td colspan=3 align=left class="title"><b>3. Maintenance</b></td>
 </tr>
-<tr>
+<tr class="input-line">
  <td align=right width=350>
   <div onMouseOver="spcc.info.setItalic(this, 'maintInverterInfo')" 
 	   onMouseOut="spcc.info.setItalic(this, 'maintInverterInfo')" 
@@ -192,13 +194,13 @@ jQuery.noConflict();
  <td width=100><input type="text"  class="input" id="maintInverter" value="10" size=10 onChange="spcc.val.maintInverter(this);"/></td>
  <td width=50>years</td>
 </tr>
-<tr id="maintInverterInfo" style="display:none">
+<tr id="maintInverterInfo" class="input-line" style="display:none">
  <td colspan=3>
-  The lifetime of a solar panel is usually measured in decades, but the inverter will likely not last as long. 
-  To calculate full costs the replacement of the inverter must accounted for. Again, warranty may be the best indicator.
+  <i>The lifetime of a solar panel is usually measured in decades, but the inverter will likely not last as long. 
+  To calculate full costs the replacement of the inverter must accounted for. Again, warranty may be the best indicator.</i>
  </td>
 </tr>
-<tr>
+<tr class="input-line-alt">
  <td align=right width=350>
   <div onMouseOver="spcc.info.setItalic(this, 'maintOtherInfo')" 
 	   onMouseOut="spcc.info.setItalic(this, 'maintOtherInfo')" 
@@ -210,17 +212,18 @@ jQuery.noConflict();
  <td width=100><input type="text"  class="input" id="maintOther" value="20" size=10 onChange="spcc.val.maintOther(this);"/></td>
  <td width=50>&euro;/a</td>
 </tr>
-<tr id="maintOtherInfo" style="display:none">
+<tr id="maintOtherInfo" class="input-line-alt" style="display:none">
  <td colspan=3>
-  Other costs that may arrive, in euros per year (€/a). 
+  <i>Other costs that may arrive, in euros per year (€/a). 
   Cleaning can be a necessity after long periods without rain, or in places frequented by birds.
-  If insurance is required it can also be included in this field.
+  If insurance is required it can also be included in this field.</i>
  </td>
 </tr>
+<tr></tr>
 <tr>
- <td colspan=3 align=left><b>4. Financing</b></td>
+ <td colspan=3 align=left class="title"><b>4. Financing</b></td>
 </tr>
-<tr>
+<tr class="input-line">
  <td align=right width=350>
   <div onMouseOver="spcc.info.setItalic(this, 'fincPercentInfo')" 
 	   onMouseOut="spcc.info.setItalic(this, 'fincPercentInfo')" 
@@ -232,14 +235,14 @@ jQuery.noConflict();
  <td width=100><input type="text"  class="input" id="fincPercent" value="80" size=10 onChange="spcc.val.fincPercent(this);"/></td>
  <td width=50>%</td>
 </tr>
-<tr id="fincPercentInfo" style="display:none">
+<tr id="fincPercentInfo" class="input-line" style="display:none">
  <td colspan=3>
-  In case the system needs to be financed, its costs must be taken into account. 
+  <i>In case the system needs to be financed, its costs must be taken into account. 
   Here goes the percentage of the initial investment financed by a third party.
-  As an example if the initial investment is 1000 € and financing is 800 € the value to insert is 80%.
+  As an example if the initial investment is 1000 € and financing is 800 € the value to insert is 80%.</i>
  </td>
 </tr>
-<tr>
+<tr class="input-line-alt">
  <td align=right width=350>
   <div onMouseOver="spcc.info.setItalic(this, 'fincTimeInfo')" 
 	   onMouseOut="spcc.info.setItalic(this, 'fincTimeInfo')" 
@@ -251,12 +254,12 @@ jQuery.noConflict();
  <td width=100><input type="text"  class="input" id="fincTime" value="8" size=10 onChange="spcc.val.fincTime(this);"/></td>
  <td width=50>years</td>
 </tr>
-<tr id="fincTimeInfo" style="display:none">
+<tr id="fincTimeInfo" class="input-line-alt" style="display:none">
  <td colspan=3>
-  The time span in years that will it take to pay back the financing.
+  <i>The time span in years that will it take to pay back the financing.</i>
  </td>
 </tr>
-<tr>
+<tr class="input-line">
  <td align=right width=350>
   <div onMouseOver="spcc.info.setItalic(this, 'fincInterestInfo')" 
 	   onMouseOut="spcc.info.setItalic(this, 'fincInterestInfo')" 
@@ -268,15 +271,16 @@ jQuery.noConflict();
  <td width=100><input type="text"  class="input" id="fincInterest" value="2" size=10 onChange="spcc.val.fincInterest(this);"/></td>
  <td width=50>%/a</td>
 </tr>
-<tr id="fincInterestInfo" style="display:none">
+<tr id="fincInterestInfo" class="input-line" style="display:none">
  <td colspan=3>
-  The interested paid back to the financier as percentage per year (%/a).
+  <i>The interested paid back to the financier as percentage per year (%/a).</i>
  </td>
 </tr>
+<tr></tr>
 <tr>
- <td colspan=3 align=left><b>5. Storage</b></td>
+ <td colspan=3 align=left class="title"><b>5. Storage</b></td>
 </tr>
-<tr>
+<tr class="input-line">
  <td align=right width=350>
   <div onMouseOver="spcc.info.setItalic(this, 'strgCostInfo');" 
 	   onMouseOut="spcc.info.setItalic(this, 'strgCostInfo')" 
@@ -289,13 +293,13 @@ jQuery.noConflict();
  <td width=50>&euro;</td>
 </tr>
 </tr>
-<tr id="strgCostInfo" style="display:none">
+<tr id="strgCostInfo" class="input-line" style="display:none">
  <td colspan=3>
-  If the system is being installed off-the-grid, instead linked to a storage system its costs must be included in the calculation.
-  Beyond batteries it should include controller(s) or any other additional hardware costs.
+  <i>If the system is being installed off-the-grid, instead linked to a storage system its costs must be included in the calculation.
+  Beyond batteries it should include controller(s) or any other additional hardware costs.</i>
  </td>
 </tr>
-<tr>
+<tr class="input-line-alt">
  <td align=right width=350>
   <div onMouseOver="spcc.info.setItalic(this, 'strgLifetimeInfo')" 
 	   onMouseOut="spcc.info.setItalic(this, 'strgLifetimeInfo')" 
@@ -307,13 +311,13 @@ jQuery.noConflict();
  <td width=100><input type="text"  class="input" id="strgLifetime" value="10" size=10 onChange="spcc.val.strgLifetime(this);"/></td>
  <td width=50>years</td>
 </tr>
-<tr id="strgLifetimeInfo" style="display:none">
+<tr id="strgLifetimeInfo" class="input-line-alt" style="display:none">
  <td colspan=3>
-  The storage harware should have lifetime inferior to that of the panels themselves, thus replacements must be accounted.
-  Warranty is once more the best indicator.
+  <i>The storage harware should have lifetime inferior to that of the panels themselves, thus replacements must be accounted.
+  Warranty is once more the best indicator.</i>
  </td>
 </tr>
-<tr>
+<tr class="input-line">
  <td align=right width=350>
   <div onMouseOver="spcc.info.setItalic(this, 'strgEffInfo')" 
 	   onMouseOut="spcc.info.setItalic(this, 'strgEffInfo')" 
@@ -325,14 +329,14 @@ jQuery.noConflict();
  <td width=100><input type="text"  class="input" id="strgEff" value="90" size=10 onChange="spcc.val.strgEff(this);"/></td>
  <td width=50>%</td>
 </tr>
-<tr id="strgEffInfo" style="display:none">
+<tr id="strgEffInfo" class="input-line" style="display:none">
  <td colspan=3>
-  Any storage system has losses, meaning that the amount of energy it feeds back is always somewhat inferior to that used to charge it.
+  <i>Any storage system has losses, meaning that the amount of energy it feeds back is always somewhat inferior to that used to charge it.
   This value is the percentage of the energy return relative to the energy charged. 
-  For instance, if a system is charged with 1000 W and returns back 900 W this value is 90%.
+  For instance, if a system is charged with 1000 W and returns back 900 W this value is 90%.</i>
  </td>
 </tr>
-<tr>
+<tr class="input-line-alt">
  <td align=right width=350>
   <div onMouseOver="spcc.info.setItalic(this, 'strgShareInfo')" 
 	   onMouseOut="spcc.info.setItalic(this, 'strgShareInfo')" 
@@ -344,10 +348,10 @@ jQuery.noConflict();
  <td width=100><input type="text"  class="input" id="strgShare" value="30" size=10 onChange="spcc.val.strgShare(this);"/></td>
  <td width=50>%</td>
 </tr>
-<tr id="strgShareInfo" style="display:none">
+<tr id="strgShareInfo" class="input-line-alt" style="display:none">
  <td colspan=3>
-  Not all the energy generated by the solar panels needs to be stored, part of is consumed immediatly by any appliances connected.
-  An off-the-grid system should be dimensioned in order to minimise the usage of the storage system, so that it is needed mainly during summer, making the extra energy generated during the day available to the night; during the winter months idealy the storage system shouldn't be needed. This field is thus the percentage of the total energy generated throughout the year that gets to be stored.
+  <i>Not all the energy generated by the solar panels needs to be stored, part of is consumed immediatly by any appliances connected.
+  An off-the-grid system should be dimensioned in order to minimise the usage of the storage system, so that it is needed mainly during summer, making the extra energy generated during the day available to the night; during the winter months idealy the storage system shouldn't be needed. This field is thus the percentage of the total energy generated throughout the year that gets to be stored.</i>
  </td>
 </tr>
 <tr height=80>
