@@ -83,7 +83,7 @@ jQuery.noConflict();
  <td colspan=3>
   <i>The exepcted amount of energy generated yearly in Watt-hour per Watt-peak per year (Wh/Wp/a). 
   This figure is a function of the sunlight the system receives each year, dependent on latitude and orientation.
-  The JRC produces a series of maps for Europe with maximum generation values that can be a good starting point to obtain this information.</i>
+  The <a href=http://re.jrc.ec.europa.eu/pvgis/>JRC</a> produces a series of maps for Europe with maximum generation values that can be a good starting point to obtain this information.</i>
  </td>
 </tr>
 <tr class="input-line">
@@ -100,7 +100,7 @@ jQuery.noConflict();
 </tr>
 <tr id="sysDecayInfo" class="input-line" style="display:none">
  <td colspan=3>
- <i> The efficiency with with solar panels harvest energy decays with time, in part due to the impact of sunlight itself.
+ <i> The efficiency with wich solar panels harvest energy decays with time, in part due to the impact of sunlight itself.
   Although not linear, nor constant, a figure of 0.5 percent per year (%/a) is a sensible option (i.e. a system that generated 1000 Wh this year will generate 995 Wh next year). </i>
  </td>
 </tr>
@@ -117,7 +117,7 @@ jQuery.noConflict();
 </tr>
 <tr id="sysLifetimeInfo" class="input-line-alt" style="display:none">
  <td colspan=3>
-  <i>The number of years the system is supposed to last. Various indicators can be used to determine expected system lifetime, like the point where efficiency drops below 80% of initial conditions. However, the most sensible option is to match this figure with the panels warranty period.</i>
+  <i>The number of years the system is supposed to last. Various indicators can be used to determine expected system lifetime, like the point where efficiency drops below 80% of initial characteristics. However, the most sensible option is to match this figure to the panels warranty period.</i>
  </td>
 </tr>
 <tr></tr>
@@ -139,7 +139,7 @@ jQuery.noConflict();
 <tr id="invPanelsInfo" class="input-line" style="display:none">
  <td colspan=3>
   <i>The cost of the solar panels composing the system in euro per kWp (&euro;/kWp). 
-  If only the bulk cost is known, including inverter and installation, insert the full value here and insert serp in the next two fields.</i>
+  If only the bulk cost is known, including inverter and installation, insert the full value here and leave zero on the following two fields.</i>
  </td>
 </tr>
 <tr class="input-line-alt">
@@ -157,7 +157,7 @@ jQuery.noConflict();
 <tr id="invInverterInfo" class="input-line-alt" style="display:none">
  <td colspan=3>
   <i>The cost of the inverter linking the system to the grid (or storage system) in euro per kWp (&euro;/kWp). 
-  If only the bulk cost is known, including panels and installation, leave zero in this field and use only the Panels cost field.</i>
+  If only the bulk cost is known, including panels and inverter, leave zero in this field and use only the Panels cost field.</i>
  </td>
 </tr>
 <tr class="input-line">
@@ -196,7 +196,7 @@ jQuery.noConflict();
 </tr>
 <tr id="maintInverterInfo" class="input-line" style="display:none">
  <td colspan=3>
-  <i>The lifetime of a solar panel is usually measured in decades, but the inverter will likely not last as long. 
+  <i>The lifetime of a solar panel is usually measured in decades, but the inverter is unlikely to last as long. 
   To calculate full costs the replacement of the inverter must accounted for. Again, warranty may be the best indicator.</i>
  </td>
 </tr>
@@ -214,7 +214,7 @@ jQuery.noConflict();
 </tr>
 <tr id="maintOtherInfo" class="input-line-alt" style="display:none">
  <td colspan=3>
-  <i>Other costs that may arrive, in euros per year (€/a). 
+  <i>Other costs that may arrive, in euros per year (&euro;/a). 
   Cleaning can be a necessity after long periods without rain, or in places frequented by birds.
   If insurance is required it can also be included in this field.</i>
  </td>
@@ -237,9 +237,9 @@ jQuery.noConflict();
 </tr>
 <tr id="fincPercentInfo" class="input-line" style="display:none">
  <td colspan=3>
-  <i>In case the system needs to be financed, its costs must be taken into account. 
+  <i>In case the system needs to be financed, this extra cost must be taken into account. 
   Here goes the percentage of the initial investment financed by a third party.
-  As an example if the initial investment is 1000 € and financing is 800 € the value to insert is 80%.</i>
+  As an example if the initial investment is 1000 &euro; and financing is 800 &euro; the value to insert is 80%.</i>
  </td>
 </tr>
 <tr class="input-line-alt">
@@ -256,7 +256,7 @@ jQuery.noConflict();
 </tr>
 <tr id="fincTimeInfo" class="input-line-alt" style="display:none">
  <td colspan=3>
-  <i>The time span in years that will it take to pay back the financing.</i>
+  <i>The time span in years that it will take to pay back the financing.</i>
  </td>
 </tr>
 <tr class="input-line">
@@ -295,8 +295,8 @@ jQuery.noConflict();
 </tr>
 <tr id="strgCostInfo" class="input-line" style="display:none">
  <td colspan=3>
-  <i>If the system is being installed off-the-grid, instead linked to a storage system its costs must be included in the calculation.
-  Beyond batteries it should include controller(s) or any other additional hardware costs.</i>
+  <i>If the system is being installed off-the-grid, linkead instead to a storage system, its costs must be included in the calculation.
+  Beyond batteries this value must include controller(s) or any other additional hardware costs.</i>
  </td>
 </tr>
 <tr class="input-line-alt">
@@ -313,7 +313,7 @@ jQuery.noConflict();
 </tr>
 <tr id="strgLifetimeInfo" class="input-line-alt" style="display:none">
  <td colspan=3>
-  <i>The storage harware should have lifetime inferior to that of the panels themselves, thus replacements must be accounted.
+  <i>The storage harware should have a lifetime inferior to that of the panels themselves, thus replacements must be accounted for.
   Warranty is once more the best indicator.</i>
  </td>
 </tr>
@@ -333,7 +333,7 @@ jQuery.noConflict();
  <td colspan=3>
   <i>Any storage system has losses, meaning that the amount of energy it feeds back is always somewhat inferior to that used to charge it.
   This value is the percentage of the energy return relative to the energy charged. 
-  For instance, if a system is charged with 1000 W and returns back 900 W this value is 90%.</i>
+  For instance, if a system is charged with 1000 Wh and returns back 900 Wh this value is 90%.</i>
  </td>
 </tr>
 <tr class="input-line-alt">
@@ -350,8 +350,8 @@ jQuery.noConflict();
 </tr>
 <tr id="strgShareInfo" class="input-line-alt" style="display:none">
  <td colspan=3>
-  <i>Not all the energy generated by the solar panels needs to be stored, part of is consumed immediatly by any appliances connected.
-  An off-the-grid system should be dimensioned in order to minimise the usage of the storage system, so that it is needed mainly during summer, making the extra energy generated during the day available to the night; during the winter months idealy the storage system shouldn't be needed. This field is thus the percentage of the total energy generated throughout the year that gets to be stored.</i>
+  <i>Not all the energy generated by the solar panels needs to be stored, part of is consumed immediatly by household appliances.
+  An off-the-grid system should be dimensioned in order to minimise the usage of the storage system, so that it is needed mainly during summer, making the extra energy generated during the day available to the night; during the winter months idealy the storage system shouldn't be needed. This field is thus the percentage of the total energy generated throughout the year that needs to be stored.</i>
  </td>
 </tr>
 <tr height=80>
