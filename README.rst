@@ -31,14 +31,14 @@ This code is dependent on the following JavaScript libraries:
 
 [1] http://jquery.com/
 
-[3] http://www.highcharts.com/
+[2] http://www.highcharts.com/
 
 License
 --------------------------------------------------------------------------------------
 
-SPCC is released under the EUPL 1.1 license. For further details please read 
-the LICENSE file. For more information on this license please visit:
+SPCC is released under the EUPL 1.1 license [3]. For further details please read 
+the LICENSE file.
 
-http://ec.europa.eu/idabc/eupl 
+[3] http://ec.europa.eu/idabc/eupl 
 
 
