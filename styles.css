@@ -25,3 +25,8 @@
 	border-width: 3px; 
 	border-radius: 6px;
 }
+
+.descriptor
+{
+	cursor:pointer;
+}

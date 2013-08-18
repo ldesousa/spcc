@@ -53,7 +53,8 @@ jQuery.noConflict();
  <td align=right width=350>
   <div onMouseOver="spcc.info.setItalic(this, 'sysCapInfo')" 
 	   onMouseOut="spcc.info.setItalic(this, 'sysCapInfo')" 
-       onClick="spcc.info.toggle(this, 'sysCapInfo')">
+       onClick="spcc.info.toggle(this, 'sysCapInfo')"
+	   class="descriptor">
    Installed capacity
   </div>
  </td>
@@ -70,7 +71,8 @@ jQuery.noConflict();
  <td align=right width=350>
   <div onMouseOver="spcc.info.setItalic(this, 'sysGenInfo')" 
 	   onMouseOut="spcc.info.setItalic(this, 'sysGenInfo')" 
-       onClick="spcc.info.toggle(this, 'sysGenInfo')">
+       onClick="spcc.info.toggle(this, 'sysGenInfo')"
+	   class="descriptor">
 	Expected generation
   </div>
  </td>
@@ -88,7 +90,8 @@ jQuery.noConflict();
  <td align=right width=350>
   <div onMouseOver="spcc.info.setItalic(this, 'sysDecayInfo')" 
 	   onMouseOut="spcc.info.setItalic(this, 'sysDecayInfo')" 
-       onClick="spcc.info.toggle(this, 'sysDecayInfo')">
+       onClick="spcc.info.toggle(this, 'sysDecayInfo')"
+	   class="descriptor">
 	Efficiency decay
   </div>
  </td>
@@ -105,7 +108,8 @@ jQuery.noConflict();
  <td align=right width=350>
  <div onMouseOver="spcc.info.setItalic(this, 'sysLifetimeInfo')" 
 	  onMouseOut="spcc.info.setItalic(this, 'sysLifetimeInfo')" 
-      onClick="spcc.info.toggle(this, 'sysLifetimeInfo')">
+      onClick="spcc.info.toggle(this, 'sysLifetimeInfo')"
+	   class="descriptor">
   Expected lifetime
  </div>
  <td width=100><input type="text"  class="input" id="sysLifetime" value="30" size=10 onChange="spcc.val.sysLifetime(this);"/></td>
@@ -123,7 +127,8 @@ jQuery.noConflict();
  <td align=right width=350>
   <div onMouseOver="spcc.info.setItalic(this, 'invPanelsInfo')" 
 	   onMouseOut="spcc.info.setItalic(this, 'invPanelsInfo')" 
-       onClick="spcc.info.toggle(this, 'invPanelsInfo')">
+       onClick="spcc.info.toggle(this, 'invPanelsInfo')"
+	   class="descriptor">
 	Panels
   </div>
  </td>
@@ -140,7 +145,8 @@ jQuery.noConflict();
  <td align=right width=350>
   <div onMouseOver="spcc.info.setItalic(this, 'invInverterInfo')" 
 	   onMouseOut="spcc.info.setItalic(this, 'invInverterInfo')" 
-       onClick="spcc.info.toggle(this, 'invInverterInfo')">
+       onClick="spcc.info.toggle(this, 'invInverterInfo')"
+	   class="descriptor">
 	Inverter
   </div>
  </td>
@@ -157,7 +163,8 @@ jQuery.noConflict();
  <td align=right width=350>
   <div onMouseOver="spcc.info.setItalic(this, 'invInstallInfo')" 
 	   onMouseOut="spcc.info.setItalic(this, 'invInstallInfo')" 
-       onClick="spcc.info.toggle(this, 'invInstallInfo')">
+       onClick="spcc.info.toggle(this, 'invInstallInfo')"
+	   class="descriptor">
 	Assembly and Installation
   </div>
 </td>
@@ -177,7 +184,8 @@ jQuery.noConflict();
  <td align=right width=350>
   <div onMouseOver="spcc.info.setItalic(this, 'maintInverterInfo')" 
 	   onMouseOut="spcc.info.setItalic(this, 'maintInverterInfo')" 
-       onClick="spcc.info.toggle(this, 'maintInverterInfo')">
+       onClick="spcc.info.toggle(this, 'maintInverterInfo')"
+	   class="descriptor">
 	Inverter lifetime
   </div>
  </td>
@@ -194,7 +202,8 @@ jQuery.noConflict();
  <td align=right width=350>
   <div onMouseOver="spcc.info.setItalic(this, 'maintOtherInfo')" 
 	   onMouseOut="spcc.info.setItalic(this, 'maintOtherInfo')" 
-       onClick="spcc.info.toggle(this, 'maintOtherInfo')">
+       onClick="spcc.info.toggle(this, 'maintOtherInfo')"
+	   class="descriptor">
 	Other costs
   </div>
  </td>
@@ -215,7 +224,8 @@ jQuery.noConflict();
  <td align=right width=350>
   <div onMouseOver="spcc.info.setItalic(this, 'fincPercentInfo')" 
 	   onMouseOut="spcc.info.setItalic(this, 'fincPercentInfo')" 
-       onClick="spcc.info.toggle(this, 'fincPercentInfo')">
+       onClick="spcc.info.toggle(this, 'fincPercentInfo')"
+	   class="descriptor">
 	Percentage financed
   </div>
  </td>
@@ -233,7 +243,8 @@ jQuery.noConflict();
  <td align=right width=350>
   <div onMouseOver="spcc.info.setItalic(this, 'fincTimeInfo')" 
 	   onMouseOut="spcc.info.setItalic(this, 'fincTimeInfo')" 
-       onClick="spcc.info.toggle(this, 'fincTimeInfo')">
+       onClick="spcc.info.toggle(this, 'fincTimeInfo')"
+	   class="descriptor">
 	Time
   </div>
  </td>
@@ -249,7 +260,8 @@ jQuery.noConflict();
  <td align=right width=350>
   <div onMouseOver="spcc.info.setItalic(this, 'fincInterestInfo')" 
 	   onMouseOut="spcc.info.setItalic(this, 'fincInterestInfo')" 
-       onClick="spcc.info.toggle(this, 'fincInterestInfo')">
+       onClick="spcc.info.toggle(this, 'fincInterestInfo')"
+	   class="descriptor">
 	Interest
   </div>
  </td>
@@ -266,9 +278,10 @@ jQuery.noConflict();
 </tr>
 <tr>
  <td align=right width=350>
-  <div onMouseOver="spcc.info.setItalic(this, 'strgCostInfo')" 
+  <div onMouseOver="spcc.info.setItalic(this, 'strgCostInfo');" 
 	   onMouseOut="spcc.info.setItalic(this, 'strgCostInfo')" 
-       onClick="spcc.info.toggle(this, 'strgCostInfo')">
+       onClick="spcc.info.toggle(this, 'strgCostInfo')"
+	   class="descriptor">
 	Cost
   </div>
  </td>
@@ -286,7 +299,8 @@ jQuery.noConflict();
  <td align=right width=350>
   <div onMouseOver="spcc.info.setItalic(this, 'strgLifetimeInfo')" 
 	   onMouseOut="spcc.info.setItalic(this, 'strgLifetimeInfo')" 
-       onClick="spcc.info.toggle(this, 'strgLifetimeInfo')">
+       onClick="spcc.info.toggle(this, 'strgLifetimeInfo')"
+	   class="descriptor">
 	Lifetime
   </div>
  </td>
@@ -303,7 +317,8 @@ jQuery.noConflict();
  <td align=right width=350>
   <div onMouseOver="spcc.info.setItalic(this, 'strgLifetimeInfo')" 
 	   onMouseOut="spcc.info.setItalic(this, 'strgLifetimeInfo')" 
-       onClick="spcc.info.toggle(this, 'strgLifetimeInfo')">
+       onClick="spcc.info.toggle(this, 'strgLifetimeInfo')"
+	   class="descriptor">
 	Effiency
   </div>
  </td>
@@ -321,7 +336,8 @@ jQuery.noConflict();
  <td align=right width=350>
   <div onMouseOver="spcc.info.setItalic(this, 'strgEffInfo')" 
 	   onMouseOut="spcc.info.setItalic(this, 'strgEffInfo')" 
-       onClick="spcc.info.toggle(this, 'strgEffInfo')">
+       onClick="spcc.info.toggle(this, 'strgEffInfo')"
+	   class="descriptor">
 	Share of energy stored
   </div>
  </td>
